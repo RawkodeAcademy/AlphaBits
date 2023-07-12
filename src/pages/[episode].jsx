@@ -60,7 +60,7 @@ export default function Episode({ episode }) {
 }
 
 export async function getStaticProps({ params }) {
-  let feed = await parse('https://their-side-feed.vercel.app/api/feed')
+  let feed = await parse('https://feeds.transistor.fm/alphabits')
   let episode = feed.items
     .map(({ id, title, description, content, enclosures, published }) => ({
       id: id.toString(),
