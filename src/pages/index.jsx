@@ -101,12 +101,11 @@ export default function Home({ episodes }) {
     <>
       <Head>
         <title>
-          Their Side - Conversations with the most tragically misunderstood
-          people of our time
+          AlphaBits - Join David and Brian as they explore cutting edge technology and software.
         </title>
         <meta
           name="description"
-          content="Conversations with the most tragically misunderstood people of our time."
+          content="Join David Flanagan (Rawkode) and Brian Ketelsen (bketelsen) as they share one bit of new technology or software that they've found each week. Learn about new and upcoming software before it hits the mainstream."
         />
       </Head>
       <div className="pt-16 pb-12 sm:pb-4 lg:pt-12">
@@ -126,7 +125,7 @@ export default function Home({ episodes }) {
 }
 
 export async function getStaticProps() {
-  let feed = await parse('https://their-side-feed.vercel.app/api/feed')
+  let feed = await parse('https://feeds.transistor.fm/alphabits')
   console.log(process.env.TRANSISTOR_API_KEY)
   return {
     props: {
